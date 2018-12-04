@@ -177,7 +177,7 @@ def trans(city,name,pro,level):#高德地图可视化
         add = name[i]
         chengshi=city[i]
         parameters = { 'address': add, 'key': '','city':chengshi }
-       html = requests.get('https://restapi.amap.com/v3/geocode/geo', params=parameters).json()
+        html = requests.get('https://restapi.amap.com/v3/geocode/geo', params=parameters).json()
         print(html)
         try:
             t['jingwei'] = html['geocodes'][0]['location']
